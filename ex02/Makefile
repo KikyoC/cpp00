@@ -2,7 +2,7 @@ NAME= PhoneBook
 
 CFLAGS= -Wall -Werror -Wextra -std=c++98 -g
 
-SRCS=
+SRCS=tests.cpp Account.cpp
 OBJS=$(SRCS:.cpp=.o)
 
 all: $(NAME)
