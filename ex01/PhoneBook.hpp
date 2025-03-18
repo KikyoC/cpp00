@@ -1,3 +1,8 @@
+#ifndef __PHONEBOOK_H__
+#define __PHONEBOOK_H__
+
+
+
 #include "Contact.hpp"
 
 class PhoneBook {
@@ -10,5 +15,4 @@ class PhoneBook {
 		Contact contacts[9];
 		int	last_id;
 };
-
-
+#endif

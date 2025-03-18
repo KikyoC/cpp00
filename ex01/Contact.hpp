@@ -1,3 +1,7 @@
+
+#ifndef __CONTACT_H__
+#define __CONTACT_H__
+
 #include <string>
 class Contact {
 	public:
@@ -15,3 +19,4 @@ class Contact {
 		std::string secret;
 		std::string get_string(std::string);
 };
+#endif
