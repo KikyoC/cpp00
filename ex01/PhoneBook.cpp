@@ -41,7 +41,7 @@ int force_ask(std::string question, std::string *res)
 	std::cout << question << std::endl;
 	if (!std::getline(std::cin, *res))
 	{
-		std::cout << "Foud null line" << std::endl;
+		std::cout << "exit" << std::endl;
 		return(1);
 	}
 	return (0);
