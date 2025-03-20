@@ -4,6 +4,7 @@
 #include <iostream>
 #include <limits>
 #include <ostream>
+#include <sstream>
 #include <string>
 
 PhoneBook::PhoneBook(void){
@@ -44,6 +45,8 @@ int force_ask(std::string question, std::string *res)
 		std::cout << "exit" << std::endl;
 		return(1);
 	}
+	if ((*res)[0] == '\0')
+		return (force_ask(question, res));
 	return (0);
 }
 
@@ -87,7 +90,8 @@ int search_contact(PhoneBook pb)
 			return (0);
 		}
 	}
-	id = std::stoi(str_id);
+	std::istringstream is(str_id);
+	is >> id;
 	if (id > 7)
 	{
 		std::cout << "This is not a valid integer (Can only be between 0 and 7 inclued)" << std::endl;
@@ -112,8 +116,8 @@ int main(void)
 	{
 		if (!answer.compare("ADD") && add_contact_prompt(&pb))
 				return (1) ;
-		else if (!answer.compare("SEARCH"))
-			search_contact(pb);
+		else if (!answer.compare("SEARCH") && search_contact(pb))
+				return (1);
 	}
 }
 
