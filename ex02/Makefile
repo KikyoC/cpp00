@@ -1,4 +1,4 @@
-NAME= PhoneBook
+NAME= Bank
 
 CFLAGS= -Wall -Werror -Wextra -std=c++98 -g
 
