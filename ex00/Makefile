@@ -10,8 +10,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.c
-	c++ -c $^ -o $@
+%.o: %.cpp
+	c++ $(CFLAGS) -c $^ -o $@
 
 clean:
 	rm -f $(OBJS)
