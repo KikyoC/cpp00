@@ -11,6 +11,7 @@ class PhoneBook {
 		void add_contact(Contact contact);
 		void print_book();
 		Contact *get_contacts();
+		~PhoneBook();
 	private:
 		Contact contacts[9];
 		int	last_id;

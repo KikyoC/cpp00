@@ -11,6 +11,8 @@ Contact::Contact(std::string f_name, std::string l_name, std::string n_name, std
 	this->secret = secret;
 }
 
+Contact::~Contact(){};
+
 Contact::Contact(){};
 
 std::string Contact::get_string(std::string str) {
