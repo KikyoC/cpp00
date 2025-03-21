@@ -21,6 +21,8 @@ std::string Contact::get_string(std::string str) {
 
 	for(i = 0; i < 9 && i < str.length(); i++)
 		res += str[i];
+	if (i == 9)
+		return (res);
 	for (int j = i; j < 10; j++)
 		res += ' ';
 	return (res);
