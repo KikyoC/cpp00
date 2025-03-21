@@ -15,11 +15,11 @@ Contact::Contact(){};
 
 std::string Contact::get_string(std::string str) {
 	std::string res = "";
-	int	i;
+	unsigned long	i;
 
-	for(i = 0; i < 10 && i < str.length(); i++)
+	for(i = 0; i < 9 && i < str.length(); i++)
 		res += str[i];
-	for (i; i < 10; i++)
+	for (int j = i; j < 10; j++)
 		res += ' ';
 	return (res);
 }
