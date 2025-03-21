@@ -2,13 +2,14 @@
 #include <cctype>
 #include <cstdlib>
 #include <iostream>
-#include <limits>
 #include <ostream>
 #include <string>
 
 PhoneBook::PhoneBook(void){
 	this->last_id = -1;
 }
+
+PhoneBook::~PhoneBook(){};
 
 void PhoneBook::add_contact(Contact contact)
 {

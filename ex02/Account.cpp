@@ -32,6 +32,8 @@ int Account::getNbWithdrawals()
 	return (_totalNbWithdrawals);
 }
 
+Account::~Account(){};
+
 void Account::_displayTimestamp()
 {
 	char res[20];
