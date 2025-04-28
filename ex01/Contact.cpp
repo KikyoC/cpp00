@@ -23,7 +23,7 @@ std::string Contact::get_string(std::string str) {
 		res += str[i];
 	if (i == 9)
 		return (res);
-	for (int j = i; j < 10; j++)
+	for (int j = i; j < 9; j++)
 		res += ' ';
 	return (res);
 }
@@ -33,13 +33,13 @@ void Contact::print(int index)
 	std::cout << "┃" << index << "         ";
 
 	std::string f_name = get_string(this->f_name);
-	std::cout << "┃" << f_name << (this->f_name.length() > 9 ? "." : "");
+	std::cout << "┃" << f_name << (this->f_name.length() > 9 ? "." : " ");
 
 	std::string l_name = get_string(this->l_name);
-	std::cout << "┃" << l_name << (this->l_name.length() > 9 ? "." : "");
+	std::cout << "┃" << l_name << (this->l_name.length() > 9 ? "." : " ");
 
 	std::string n_name = get_string(this->n_name);
-	std::cout << "┃" << n_name << (this->n_name.length() > 9 ? ".┃" : "┃") << std::endl;
+	std::cout << "┃" << n_name << (this->n_name.length() > 10 ? ".┃" : " ┃") << std::endl;
 }
 
 void Contact::print_details()
